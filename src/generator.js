@@ -34,13 +34,14 @@ exports.activate = function activate(context) {
         // console.log('decorator sample is activated');
         let timeout = undefined;
         let activeEditor = vscode.window.activeTextEditor;
+        {{styles}}
         function updateDecorations() {
             if (!activeEditor) {
                 return;
             }
-            {{styles}}
             {{matches}}
             let text = activeEditor.document.getText();
+            console.log(text);
             let i = 0
             while (i < text.length) {
                 let consumed = {{matchers}}.map(x => x(text.substring(i))).filter(x=>x>0).shift()
@@ -57,7 +58,7 @@ exports.activate = function activate(context) {
                 clearTimeout(timeout);
                 timeout = undefined;
             }
-            timeout = setTimeout(updateDecorations, 500);
+            timeout = setTimeout(updateDecorations, 0);
         }
         if (activeEditor) {
             triggerUpdateDecorations();
