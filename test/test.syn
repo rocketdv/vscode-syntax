@@ -1,0 +1,18 @@
+def comment #.* #8c8c8c
+
+def left_brack  \[ #a0a6de
+def right_brack \] #a0a6de
+def left_paren  \( #a0a6de
+def right_paren \) #a0a6de
+
+
+# this matches double equal sign and potential 
+def equals \=\=( )? #fc03a1
+
+def identifier \b[a-zA-Z][a-zA-Z0-9_-]*\b #5ecc5a
+
+def boolean (true|false) #5ac4cc
+
+def single_quote_string '(?:\\['\\rn]|[^'\\])*?' #511173
+def single_dbl_quote_string "(?:\\["\\rn]|[^"\\])*?" #511173
+def single_bt_quote_string `[^]*?` #511173

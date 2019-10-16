@@ -2,5 +2,14 @@
   "name": "syntax-highlighter",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^3.0.2"
+  },
+  "bin": {
+    "vs-syntax": "./index.js"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
 }

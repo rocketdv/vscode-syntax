@@ -1,0 +1,7 @@
+node_modules/
+*.log
+test/in/
+test/out/
+out/
+*.lock
+gulpfile.js
